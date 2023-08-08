@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  backstage:
+    image: backstage
+    ports:
+      - 7007:7007
+    environment:
+      POSTGRES_HOST: database
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: passwd
+  
+  database:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_PASSWORD: passwd
