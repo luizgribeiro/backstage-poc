@@ -1,13 +1,25 @@
 # [Backstage](https://backstage.io)
 
-This is your newly scaffolded Backstage App, Good Luck!
+### Requisitos:
 
-To configure the app create a `.env` file with the data provided from `.env.example`
+* nodejs (versão 16 ou 18)
+* yarn
 
-To start the app, run:
 
+### Configuração
+
+Para configurar o app, crie um arquivo `.env` com o template disponível em `.env.example`.
+Será necessário gerar um github PAT para a execução.
+
+
+### Build e execução
+
+Execute os comandos abaixo numa shell para buildar e executar o projeto
 
 ```sh
+yarn install --frozen-lockfile
+yarn tsc
+yarn build:backend --config ../../app-config.yaml
 docker compose build
 docker compose up
 ```
